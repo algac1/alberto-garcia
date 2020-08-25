@@ -1,0 +1,57 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-card/paper-card.html">
+
+
+<dom-module id="alberto-garcia">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+<paper-card >   
+    <h2>Ejemplo de Propiedad</h2> 
+    <paper-input label="Escribe algo" value="{{prop1}}"> </paper-input>
+    <paper-button raised class="indigo" > [[prop1]]  </paper-button>    
+    
+  </paper-card>
+
+  </template>
+
+  <script>
+    /**
+     * `alberto-garcia`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class AlbertoGarcia extends Polymer.Element {
+      static get is() { return 'alberto-garcia'; }
+      static get properties() {
+       return {
+          prop1: {
+            type: String,
+            value: ' '
+          },
+          prop2: {
+            type: String,
+            value: ' '
+                  },
+      prop3: {
+            type: String,
+            value: 'double data binding'
+                  }
+
+
+        };
+      }
+    }
+
+    window.customElements.define(AlbertoGarcia.is, AlbertoGarcia);
+  </script>
+</dom-module>
