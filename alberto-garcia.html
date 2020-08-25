@@ -13,9 +13,9 @@
     </style>
 
 <paper-card >   
-    <h2>Ejemplo de Propiedad</h2> 
-    <paper-input label="Escribe algo" value="{{prop1}}"> </paper-input>
-    <paper-button raised class="indigo" > [[prop1]]  </paper-button>    
+    <h2> [[title]] </h2>  
+    <paper-input label="Escribe algo" value="{{title}}"> </paper-input>
+    <paper-button raised class="indigo" > [[title]]  </paper-button>    
     
   </paper-card>
 
@@ -34,19 +34,10 @@
       static get is() { return 'alberto-garcia'; }
       static get properties() {
        return {
-          prop1: {
+          title: {
             type: String,
             value: ' '
-          },
-          prop2: {
-            type: String,
-            value: ' '
-                  },
-      prop3: {
-            type: String,
-            value: 'double data binding'
-                  }
-
+          }
 
         };
       }
